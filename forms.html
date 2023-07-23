@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>FORM</title>
+		<script>  
+	function validate()
+	{  
+		var fname=document.myform.fname.value;  
+		var rollno=document.myform.rollno.value; 
+var lname=document.myform.lname.value;  
+		var sec=document.myform.sec.value; 
+  
+		if (fname==null || fname==""){ 
+				alert("fname can't be blank");  
+				return false;  
+		}
+		else if(lname==null || lname=="")
+		{  
+				alert("lname can't be null");  
+				return false;  
+		}
+		else if(rollno==null || rollno=="")
+		{  
+				alert("rollno can't be null");  
+				return false;  
+		}
+		else if(sec==null || sec=="")
+		{  
+				alert("sec can't be null");  
+				return false;  
+		}    
+	}  
+	</script>  
+		<body style="background-color:cyan">
+		<H1 ALIGN=CENTER>REGISTER FORM </H1>
+		<style>
+      div {
+        margin-bottom: 10px;
+      }
+      label {
+        display: inline-block;
+        width: 150px;
+        text-align: left;
+      }
+    </style>
+		<form align=center action="regiister.php" method="post" onsubmit="return validate()" name="myform">
+		<div>
+  		<label for="fname">First name:</label>
+  		<input type="text" id="fname" name="fname" /><br>
+		<br>
+		<label for="lname">Last name:</label>
+  		<input type="text" id="lname" name="lname" /><br>
+		<br>
+		<label for="rollno">Roll Number:</label>
+  		<input type="text" id="rollno" name="rollno" />
+		
+		</div>
+		<p align=center>Choose your Section:</p>
+	<div>
+		<input type="radio" id="cse1" name="sec" value="cse 1">
+  <label for="cse1">cse 1</label><br>
+  <input type="radio" id="cse2" name="sec" value="cse 2">
+  <label for="cse2">cse 2</label><br>
+  <input type="radio" id="cse3" name="sec" value="cse 3">
+  <label for="cse3">cse 3</label>
+	</div>
+	<input type="submit" value="Submit" tabindex="2">
+	<input type="reset" value="Reset">
+		</form>
+		</body>
+	</head>
+</html>
